@@ -21,8 +21,8 @@ f.writerow(["NOME","PREÇO"]) ## Cabeçalho
 
 for r in results:
 
-    name_span_list = r.find_all("a", attrs={"class": "a-link-normal a-text-normal"}) ## Seleciona e guarda os spans
-    price_span_list = r.find_all("span", attrs={"class":"a-price"}) ## Seleciona e guarda os preços
+    name_span_list = r.find_all("a", attrs={"class": "a-link-normal a-text-normal"}) ## Seleciona e guarda os spans que exibem o nome dos produtos
+    price_span_list = r.find_all("span", attrs={"class":"a-price"}) ## Seleciona e guarda os spans que exibem o preço dos produtos
     
     for name in name_span_list:
         name = name.span.text
